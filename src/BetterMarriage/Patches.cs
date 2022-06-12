@@ -2,7 +2,7 @@
 
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.Actions;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors;
+using TaleWorlds.CampaignSystem.CampaignBehaviors;
 
 namespace BetterMarriage {
     [HarmonyPatch(typeof(RomanceCampaignBehavior), "conversation_player_opens_courtship_on_consequence")]
