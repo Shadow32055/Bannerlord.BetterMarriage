@@ -1,13 +1,24 @@
-﻿using HarmonyLib;
+﻿using BetterCore.Utils;
+using HarmonyLib;
 using TaleWorlds.MountAndBlade;
 
 namespace BetterMarriage {
-	public class SubModule : MBSubModuleBase {
+    public class SubModule : MBSubModuleBase {
 
-		protected override void OnBeforeInitialModuleScreenSetAsRoot() {
+        protected override void OnSubModuleLoad() {
+            base.OnSubModuleLoad();
+
+            Harmony h = new("Bannerlord.Shadow.BetterMarriage");
+
+            h.PatchAll();
+        }
+
+        protected override void OnBeforeInitialModuleScreenSetAsRoot() {
 			base.OnBeforeInitialModuleScreenSetAsRoot();
-			new Harmony("Bannerlord.Shadow.BetterMarriage").PatchAll();
-			Helper.SetModName("BetterMarriage");
-		}
+
+            string modName = base.GetType().Assembly.GetName().Name;
+
+            Helper.SetModName(modName);
+        }
 	}
 }

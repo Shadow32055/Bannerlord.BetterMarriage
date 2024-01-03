@@ -1,10 +1,16 @@
 <Module>
   <Name value="Better Marriage" />
   <Id value="BetterMarriage" />
-  <Version value="v1.0.0" />
-  <SingleplayerModule value="true" />
-  <MultiplayerModule value="false" />
+  <Version value="d0.0.0" />
+  <ModuleType value="Community" />
+  <ModuleCategory value="Singleplayer" />
+  <Url value="https://www.nexusmods.com/mountandblade2bannerlord/mods/3202" />
   <DependedModules>
+	<DependedModule Id="Bannerlord.Harmony" DependentVersion="v2.3.0" />
+	<DependedModule Id="Bannerlord.ButterLib" DependentVersion="v2.8.15" />
+	<DependedModule Id="Bannerlord.UIExtenderEx" DependentVersion="v2.8.1" />
+	<DependedModule Id="Bannerlord.MBOptionScreen" DependentVersion="v5.9.1" />
+	<DependedModule Id="BetterCore" DependentVersion="v1.0.0" />
     <DependedModule Id="Native" />
     <DependedModule Id="SandBoxCore" />
     <DependedModule Id="Sandbox" />
@@ -22,5 +28,4 @@
       </Tags>
     </SubModule>
   </SubModules>
-  <Xmls />
 </Module>
