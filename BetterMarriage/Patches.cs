@@ -16,7 +16,7 @@ namespace BetterMarriage {
 
                 return false;
             } catch (Exception e) {
-                NotifyHelper.ReportError(BetterMarriage.ModName, "RomanceCampaignBehavior.conversation_player_opens_courtship_on_consequence threw exception: " + e);
+                NotifyHelper.WriteError(BetterMarriage.ModName, "RomanceCampaignBehavior.conversation_player_opens_courtship_on_consequence threw exception: " + e);
             }
 
             return true;
